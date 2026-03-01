@@ -2,6 +2,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+#TODO: Rename axes,
 def scatter_weather_conditions_plot(df: pd.DataFrame, y_axis_column: dict, year_filter: str) -> None:
     filtered = df[df['Year'] == year_filter]
 
@@ -16,5 +17,4 @@ def scatter_weather_conditions_plot(df: pd.DataFrame, y_axis_column: dict, year_
     fig.update_xaxes(categoryorder='category ascending')
 
     st.plotly_chart(fig, width="content")
-    st.caption("TODO: add time slider, rename axes, add title")
 
