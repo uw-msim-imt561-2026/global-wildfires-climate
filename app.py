@@ -22,10 +22,16 @@ def main() -> None:
         wildfire_worldmap_plot(df, map_year)
 
     with st.container():
-        scatter_year = date_slider(df, key="scatter_year")
-        selected_condition = weather_condition_select()
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.text("placeholder")
+        with col2:
+            st.text("placeholder")
+        with col3:
+            scatter_year = date_slider(df, key="scatter_year")
+            selected_condition = weather_condition_select()
 
-        scatter_weather_conditions_plot(df, y_axis_column=selected_condition, year_filter=scatter_year)
+            scatter_weather_conditions_plot(df, y_axis_column=selected_condition, year_filter=scatter_year)
 
 
 if __name__ == "__main__":
