@@ -17,11 +17,12 @@ def main() -> None:
 
     df = load_data("data/Forest_Fires_Dataset_Final.csv")
 
-    with st.container():
+    t1, t2, t3 = st.tabs(["World Map", "Explore by Region", "Explore by Cause"])
+    with t1:
         map_year = date_slider(df, key="map_year")
 
         wildfire_worldmap_plot(df, map_year)
-    with st.container():
+    with t2:
         st.subheader("Top Countries by Total Burned Area")
 
         top_n = st.slider(
@@ -38,7 +39,8 @@ def main() -> None:
 
         with st.expander("Show summary table"):
             st.dataframe(summary, use_container_width=True)
-    with st.container():
+    with t3:
+
         scatter_year = date_slider(df, key="scatter_year")
         selected_condition = weather_condition_select()
 
