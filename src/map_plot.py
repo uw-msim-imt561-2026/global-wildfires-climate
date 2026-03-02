@@ -10,6 +10,6 @@ def wildfire_worldmap_plot(df: pd.DataFrame, year_filter) -> None:
                          lon='Longitude',
                          color="Fires_Count",
                          size="Burned_Area_Km",
-                         color_continuous_scale="YlOrRd",
+                         color_continuous_scale="Sunsetdark",
                          zoom=0.50)
     st.plotly_chart(fig)
