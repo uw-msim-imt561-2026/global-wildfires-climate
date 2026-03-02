@@ -1,4 +1,4 @@
-#                     global-wildfires-climate Description
+# global-wildfires-climate Description
 
 # Audience/Stakeholders: 
 The primary audience include: 
