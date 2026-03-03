@@ -1,9 +1,10 @@
 import streamlit as st
 from src.data import load_data
 from src.scatter_plot import scatter_weather_conditions_plot
-from src.filters import date_slider, weather_condition_select
+from src.filters import date_slider, weather_condition_select, country_select
 from src.map_plot import wildfire_worldmap_plot
 from src.bar_chart_occurrence import top_countries_burned_area
+from src.cause_bar import cause_country_plot
 
 
 def main() -> None:
@@ -43,8 +44,10 @@ def main() -> None:
 
         scatter_year = date_slider(df, key="scatter_year")
         selected_condition = weather_condition_select()
-
         scatter_weather_conditions_plot(df, y_axis_column=selected_condition, year_filter=scatter_year)
+
+        selected_country = country_select(df, year_filter=scatter_year, key="cause_country_filter")
+        cause_country_plot(df, year_filter=scatter_year, selected_country=selected_country)
 
 
 if __name__ == "__main__":

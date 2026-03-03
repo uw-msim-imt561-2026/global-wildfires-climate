@@ -14,3 +14,10 @@ def weather_condition_select() -> dict:
     cols = ["Temperature_C","Humidity_Percent","Wind_Speed_kmh"]
     return st.selectbox("Select weather condition", cols)
 
+def country_select(df: pd.DataFrame, year_filter: str, key: str) -> str:
+    year_filter = int(year_filter)
+    filtered_df = df[df["Year"] == year_filter]
+
+    countries = sorted(filtered_df["Country"].unique())
+
+    return st.selectbox("Select country", options=countries, key=key)
