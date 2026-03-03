@@ -14,7 +14,7 @@ def cause_country_plot(df: pd.DataFrame, year_filter:str, selected_countries: li
         st.warning("No data available.")
         return
 
-    country_cause = (filtered_df.groupby("Country", "Cause")["Fires_Count"].sum().reset_index())
+    country_cause = (filtered_df.groupby(["Country", "Cause"])["Fires_Count"].sum().reset_index())
 
     fig = px.bar(country_cause, x="Cause", y="Fires_Count",
                  color="Country",
