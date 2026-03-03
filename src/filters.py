@@ -14,3 +14,13 @@ def weather_condition_select() -> dict:
     cols = ["Temperature_C","Humidity_Percent","Wind_Speed_kmh"]
     return st.selectbox("Select weather condition", cols)
 
+
+def country_select(df: pd.DataFrame, year_filter: str, key: str) -> list:
+    year_filter = int(year_filter)
+    filtered_df = df[df["Year"] == year_filter]
+
+    countries = sorted(filtered_df["Country"].unique())
+
+    selected_countries = st.multiselect("Select country(s)", options=countries, default=countries, key=key)
+
+    return selected_countries
