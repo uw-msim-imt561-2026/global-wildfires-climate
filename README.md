@@ -7,16 +7,18 @@ The primary audience is aimed towards environmental Researchers and climate anal
 The dataset our dashboard uses covers the entire history of wildfire occurrences from 1881-2025. The variables included are Year, Country, Burned Areas, and climate related variables(temperature, humidity, and wind speed) Our dataset does not directly measure ecological recovery or community impact since the data does not contain information related to those metrics. The dataset is suited for trend analysis and cross country comparison. 
 
 # Key Columns
-Country: Nation where wildfire was recorded
-Region: Sub-national region/province/state
-Year:	Year of fire occurrence
-Burned_Area_Km:	Total land (in km²) burned
-Cause	Reported: cause of the fire
-Temperature_C:	Average temperature during the event
-Humidity_Percent:	Average relative humidity
-Wind_Speed_kmh:	Average wind speed (km/h)
-Latitude:	Geographic latitude
-Longitude:	Geographic longitude
+| Column Name | Description |
+|-------------|-------------|
+| Country | Nation where wildfire was recorded |
+| Region | Sub-national region/province/state |
+| Year | Year of fire occurrence |
+| Burned_Area_Km | Total land (km²) burned |
+| Cause | Reported cause of wildfire |
+| Temperature_C | Average temperature during event |
+| Humidity_Percent | Average relative humidity |
+| Wind_Speed_kmh | Average wind speed |
+| Latitude | Geographic latitude |
+| Longitude | Geographic longitude |
 
 # Context
 The dashboard responds to the following stakeholder questions:
