@@ -40,9 +40,12 @@ def main() -> None:
         with st.expander("Show summary table"):
             st.dataframe(summary, use_container_width=True)
     with t3:
-
-        scatter_year = date_slider(df, key="scatter_year")
-        selected_condition = weather_condition_select()
+        with st.container():
+            st.text("PLACEHOLDER")
+        with st.container():
+            st.subheader("Distribution of Cause by Weather Conditions")
+            scatter_year = date_slider(df, key="scatter_year")
+            selected_condition = weather_condition_select()
 
         scatter_weather_conditions_plot(df, y_axis_column=selected_condition, year_filter=scatter_year)
 

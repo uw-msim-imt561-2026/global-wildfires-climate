@@ -10,7 +10,7 @@ def date_slider(df: pd.DataFrame, key: str) -> str:
                            max_value=max_date,
                             key=key)
 
-def weather_condition_select() -> dict:
+def weather_condition_select() -> str:
     cols = ["Temperature_C","Humidity_Percent","Wind_Speed_kmh"]
     return st.selectbox("Select weather condition", cols)
 
