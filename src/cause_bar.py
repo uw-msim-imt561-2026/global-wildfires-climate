@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+from src.cause_color_map_util import cause_color_map
 
 def cause_country_plot(df: pd.DataFrame, year_filter:str, selected_countries: list) -> None:
     year_filter = int(year_filter)
@@ -24,7 +25,8 @@ def cause_country_plot(df: pd.DataFrame, year_filter:str, selected_countries: li
                  title=f"Wildfire Causes by Country ({year_filter})",
                  labels={"Fires_Count": "Total Fires",
                          "Country": "Country",
-                         "Cause": "Wildfire Cause"}
+                         "Cause": "Wildfire Cause"},
+                 color_discrete_map=cause_color_map()
                  )
     fig.update_layout(xaxis_tickangle=0)
 
