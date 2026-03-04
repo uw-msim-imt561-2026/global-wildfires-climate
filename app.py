@@ -3,7 +3,8 @@ from src.data import load_data
 from src.scatter_plot import scatter_weather_conditions_plot
 from src.filters import date_slider, weather_condition_select, country_select
 from src.map_plot import wildfire_worldmap_plot
-from src.bar_chart_occurrence import top_countries_burned_area
+from src.burned_chart import top_countries_burned_area, burned_area_by_region
+from src.filters_burned import burned_area_controls
 from src.cause_bar import cause_country_plot
 
 
@@ -54,11 +55,7 @@ def main() -> None:
     with t3:
         scatter_year = date_slider(df, key="scatter_year")
         selected_condition = weather_condition_select()
-        scatter_weather_conditions_plot(
-            df,
-            y_axis_column=selected_condition,
-            year_filter=scatter_year
-        )
+
         scatter_weather_conditions_plot(df, y_axis_column=selected_condition, year_filter=scatter_year)
 
         selected_countries = country_select(df, year_filter=scatter_year, key="cause_country_filter")
