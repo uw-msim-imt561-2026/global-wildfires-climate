@@ -41,7 +41,7 @@ Given a selected country, what are the top regions contributing to total burned 
 
 How do climate conditions vary across regions and years?
 
-# Users were tasked to do the following:
+# Users are tasked to do the following:
 
 Identify countries and regions with the highest burned areas from 1881-2025
 
@@ -57,6 +57,7 @@ Navigate dashboard with complete freedom
 
 Utilize the interactive feature such as clicking,sliding, or toggling
 
-Describe what users are observing during each task completion
+Describe what you are observing during each task completion
 
 Discuss any confusions or difficulty experienced during dashboard interaction
+
