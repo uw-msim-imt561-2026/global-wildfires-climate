@@ -14,7 +14,7 @@ def wildfire_worldmap_plot(df: pd.DataFrame, year_filter) -> None:
                          color_continuous_scale="Sunsetdark",
                          hover_data=["Year", "Country", "Region"],
                          width=800,
-                         height=600,
-                         zoom=0.75)
+                         height=700,
+                         zoom=1)
 
     st.plotly_chart(fig)
