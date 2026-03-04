@@ -1,4 +1,4 @@
-Streamlit Link:
+Streamlit Link: https://global-wildfires-climate-ivphsjatwe76crmm35lxks.streamlit.app/
 
 # Audience/Stakeholders: 
 The primary audience is aimed towards environmental Researchers and climate analysts
