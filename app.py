@@ -14,11 +14,12 @@ def main() -> None:
     )
 
     st.title("Global Wildfire Occurrences (1881-2025)")
-    st.caption("Historical view of wildfire occurrences in fire-prone regions")
+    st.subheader("Historical view of wildfire occurrences in fire-prone regions")
+    st.caption("Reference: uw-msim-imt561-2026/global-wildfires-climate")
 
     df = load_data("data/Forest_Fires_Dataset_Final.csv")
 
-    t1, t2, t3 = st.tabs(["World Map", "Explore by Region", "Explore by Cause"])
+    t1, t2, t3 = st.tabs(["Explore World Map", "Explore by Region", "Explore by Cause"])
     with t1:
         map_year = date_slider(df, key="map_year")
         wildfire_worldmap_plot(df, map_year)
@@ -29,7 +30,7 @@ def main() -> None:
         # Top N countries
         top_n = st.slider("Top N Countries", 5, 30, 10, key="burned_top_n")
         fig_c, top_countries_df = top_countries_burned_area(df, top_n)
-        st.plotly_chart(fig_c, use_container_width=True)
+        st.plotly_chart(fig_c, width='stretch')
 
         # Pick a country from the Top N list (via your filters module)
         selected_country = burned_area_controls(top_countries_df)
@@ -42,20 +43,20 @@ def main() -> None:
         )
 
         fig_r, region_df = burned_area_by_region(df, selected_country, top_k=top_k)
-        st.plotly_chart(fig_r, use_container_width=True)
+        st.plotly_chart(fig_r, width='stretch')
 
         with st.expander("Show tables"):
             st.write("Top Countries")
-            st.dataframe(top_countries_df, use_container_width=True)
+            st.dataframe(top_countries_df, width='stretch')
             st.write(f"Top {top_k} Regions in {selected_country}")
-            st.dataframe(region_df, use_container_width=True)
+            st.dataframe(region_df, width='stretch')
     with t3:
+        st.subheader("Distribution of Cause by Country and Weather Conditions")
         with st.container():
             country_cause_year = date_slider(df, key="country_cause_year")
             selected_countries = country_select(df, year_filter=country_cause_year, key="cause_country_filter")
             cause_country_plot(df, year_filter=country_cause_year, selected_countries=selected_countries)
         with st.container():
-            st.subheader("Distribution of Cause by Weather Conditions")
             scatter_year = date_slider(df, key="scatter_year")
             selected_condition = weather_condition_select()
             scatter_weather_conditions_plot(df, y_axis_column=selected_condition, year_filter=scatter_year)

@@ -10,6 +10,11 @@ def wildfire_worldmap_plot(df: pd.DataFrame, year_filter) -> None:
                          lon='Longitude',
                          color="Fires_Count",
                          size="Burned_Area_Km",
+                         title="Historical Wildfire World Map",
                          color_continuous_scale="Sunsetdark",
-                         zoom=0.50)
+                         hover_data=["Year", "Country", "Region"],
+                         width=800,
+                         height=600,
+                         zoom=0.25)
+
     st.plotly_chart(fig)

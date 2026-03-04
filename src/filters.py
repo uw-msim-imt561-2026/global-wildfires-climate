@@ -5,7 +5,7 @@ def date_slider(df: pd.DataFrame, key: str) -> str:
     # Key variable differentiates the multiple year slider widgets
     min_date = df["Year"].min()
     max_date = df["Year"].max()
-    return st.slider("Select date range",
+    return st.slider("Select date or date-range",
                            min_value=min_date,
                            max_value=max_date,
                             key=key)

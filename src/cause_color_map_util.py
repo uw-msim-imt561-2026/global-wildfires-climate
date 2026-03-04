@@ -2,7 +2,6 @@ import plotly.express as px
 
 def cause_color_map() -> dict:
     palette = px.colors.qualitative.Bold
-    print(palette)
     return {
         "Climate Change": palette[0],
         "Deforestation": palette[1],

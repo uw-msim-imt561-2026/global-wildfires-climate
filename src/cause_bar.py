@@ -30,4 +30,4 @@ def cause_country_plot(df: pd.DataFrame, year_filter:str, selected_countries: li
                  )
     fig.update_layout(xaxis_tickangle=0)
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
