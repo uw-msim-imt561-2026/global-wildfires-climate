@@ -1,7 +1,7 @@
 Streamlit Link: https://global-wildfires-climate-ivphsjatwe76crmm35lxks.streamlit.app/
 
 # Audience/Stakeholders: 
-The primary audience is aimed towards environmental Researchers and climate analyst. These are the primary useers as the dataset will allow them to conduct trend analysis of climate change impacts from wildfires and comparisons of each country's region changes. This dataset is instrumental in assisting researchers and analysts in utilzing aggregated datasets for climate change analysis.  
+The primary stakeholders for this dashboard are environmental researchers and climate analysts who study the relationship between wildfire activity and environmental conditions. These stakeholders work in research institutions, universities, environmental organizations, and government agencies focused on climate science and ecological monitoring. The dataset contains information that allows researchers to analyze wildfire trends over time, compare impacts across countries and regions, and explore how environmental conditions may influence wildfire occurrences. By using this dashboard, stakeholders can identify patterns in wildfire activity and generate insights that support climate research and environmental policy discussions.
 
 # Dataset Descrption
 The dataset our dashboard uses covers the entire history of wildfire occurrences from 1881-2025. The variables included are Year, Country, Burned Areas, and climate related variables(temperature, humidity, and wind speed) Our dataset does not directly measure ecological recovery or community impact since the data does not contain information related to those metrics. The dataset is suited for trend analysis and cross country comparison. 
