@@ -47,7 +47,8 @@ def main() -> None:
         st.subheader("Top Countries & Regional Breakdown (Burned Area)")
 
         # Top N countries
-        top_n = st.slider("Top N Countries", 5, 13, 10, key="burned_top_n")
+        max_count = len(df['Country'].unique())
+        top_n = st.slider("Top N Countries", 5, max_count, value=max_count, key="burned_top_n")
         fig_c, top_countries_df = top_countries_burned_area(df, top_n)
         st.plotly_chart(fig_c, width='stretch')
 
@@ -57,7 +58,7 @@ def main() -> None:
         # Top K regions within that country
         top_k = st.slider(
             "Top K Regions (within selected country)",
-            3, 3, 3,
+            0, 3, 3,
             key="burned_top_k_regions"
         )
 
