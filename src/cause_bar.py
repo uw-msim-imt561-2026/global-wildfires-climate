@@ -29,5 +29,6 @@ def cause_country_plot(df: pd.DataFrame, year_filter:str, selected_countries: li
                  color_discrete_map=cause_color_map()
                  )
     fig.update_layout(xaxis_tickangle=0)
+    fig.update_xaxes(categoryorder="category ascending")
 
     st.plotly_chart(fig, width='stretch')

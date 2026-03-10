@@ -1,0 +1,14 @@
+[logger]
+level="error"
+
+[theme]
+base="light"
+backgroundColor="#fffff9"
+headingFontWeights=300
+chartCategoricalColors=[
+    "#1e1a75",
+    "#a11477",
+    "#e13661",
+    "#ff6f4b",
+    "#ffa951"
+]

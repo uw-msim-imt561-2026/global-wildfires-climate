@@ -18,9 +18,28 @@ def main() -> None:
     st.caption("Reference: uw-msim-imt561-2026/global-wildfires-climate")
 
     df = load_data("data/Forest_Fires_Dataset_Final.csv")
+    # TODO: implement data slider for these as well
+    with st.container():
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Total Burned Area (Km)", df["Burned_Area_Km"].sum().round(0).astype(int))
+        with col2:
+            st.metric('Top Cause', df['Cause'].mode()[0])
+        with col3:
+            subcol1, subcol2, subcol3 = st.columns(3)
+            with subcol1:
+                median_temp = df['Temperature_C'].median().round(2)
+                st.metric('Median Temperature (C)', median_temp)
+            with subcol2:
+                median_wind_speed = df['Wind_Speed_kmh'].median().round(2)
+                st.metric('Wind Speed (km/h)', median_wind_speed)
+            with subcol3:
+                median_humidity = df['Humidity_Percent'].median().round(2)
+                st.metric('Median Humidity', median_humidity)
 
     t1, t2, t3 = st.tabs(["Explore World Map", "Explore by Region", "Explore by Cause"])
     with t1:
+        st.subheader("Wildfire Hotspots on the World Map")
         map_year = date_slider(df, key="map_year")
         wildfire_worldmap_plot(df, map_year)
 
