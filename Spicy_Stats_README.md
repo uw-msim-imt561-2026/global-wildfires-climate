@@ -1,10 +1,10 @@
 Streamlit Link: https://global-wildfires-climate-ivphsjatwe76crmm35lxks.streamlit.app/
 
 # Audience/Stakeholders: 
-The primary audience is aimed towards environmental Researchers and climate analysts
+The primary stakeholders for this dashboard are environmental researchers and climate analysts who study the relationship between wildfire activity and environmental conditions. These stakeholders work in research institutions, universities, environmental organizations, and government agencies focused on climate science and ecological monitoring. The dataset contains information that allows researchers to analyze wildfire trends over time, compare impacts across countries and regions, and explore how environmental conditions may influence wildfire occurrences. By using this dashboard, stakeholders can identify patterns in wildfire activity and generate insights that support climate research and environmental policy discussions.
 
-# Dataset Descrption
-The dataset our dashboard uses covers the entire history of wildfire occurrences from 1881-2025. The variables included are Year, Country, Burned Areas, and climate related variables(temperature, humidity, and wind speed) Our dataset does not directly measure ecological recovery or community impact since the data does not contain information related to those metrics. The dataset is suited for trend analysis and cross country comparison. 
+# Dataset Description
+The dataset our dashboard uses covers the history of wildfire occurrences 28 highly impacted regions (in 13 countries) from 1881-2025. The variables included are Year, Country, Burned Areas, and climate related variables(temperature, humidity, and wind speed). Our dataset does not directly measure ecological recovery or community impact since the data does not contain information related to those metrics. The dataset is suited for trend analysis and cross country comparison. All data is scoped to the sampled regions. 
 
 # Key Columns
 | Column Name | Description |
@@ -23,40 +23,29 @@ The dataset our dashboard uses covers the entire history of wildfire occurrences
 # Context
 # Wildfire Risk Conditions
 
-What climate conditions (temperature, humidity, wind) correlate with higher wildfire activity?
-
-Are specific combinations of weather variables associated with larger burned areas?
+- What climate conditions (temperature, humidity, wind) correlate with higher wildfire activity?
+- Are specific combinations of weather variables associated with larger burned areas?
 
 # Geospatial & Temporal Trends
 
-How have wildfire occurrences changed over time by country and region?
-
-Which countries have the highest historical burned area?
-
-Which regions within those countries contribute most to the burned area?
+- How have wildfire occurrences changed over time by country and region?
+- Which countries have the highest historical burned area?
+- Which regions within those countries contribute most to the burned area?
 
 # Regional Impact Insights
 
-Given a selected country, what are the top regions contributing to total burned area historically?
+- Given a selected country, what are the top regions contributing to total burned area historically?
+- How do climate conditions vary across regions and years?
 
-How do climate conditions vary across regions and years?
+# Users Tasks:
 
-# Users were tasked to do the following:
-
-Identify countries and regions with the highest burned areas from 1881-2025
-
-Use filters provided to analyze trends in wildfire occurrences in specific countries
-
-Compare trends of wildfire through world map form 1881-2025
-
-Identify any noticeable trends in wildfire occurrence over time
+- Identify countries and regions with the highest burned areas from 1881-2025
+- Use filters provided to analyze trends in wildfire occurrences in specific countries
+- Compare trends of wildfire through world map form 1881-2025
+- Identify any noticeable trends in wildfire occurrence over time
 
 # Instructions:
 
-Navigate dashboard with complete freedom
+- Navigate dashboard with complete freedom
+- Utilize the interactive features by clicking, sliding, or toggling
 
-Utilize the interactive feature such as clicking,sliding, or toggling
-
-Describe what users are observing during each task completion
-
-Discuss any confusions or difficulty experienced during dashboard interaction
