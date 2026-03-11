@@ -35,7 +35,7 @@ def main() -> None:
         st.markdown("#### 🔥Key Metrics")
         col1, col2, col3 = st.columns(3)
         with col1:
-            st.metric("Total Burned Area (Km)", df_filtered["Burned_Area_Km"].sum().round(0).astype(int))
+            st.metric("Total Burned Area (Km2)", df_filtered["Burned_Area_Km"].sum().round(0).astype(int))
         with col2:
             st.metric('Top Cause', df_filtered['Cause'].mode()[0] if not df_filtered.empty else "N/A")
         with col3:
